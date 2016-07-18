@@ -17,7 +17,10 @@ def redo():
 redo()
 
 s = gcd(m,n)
-
+print(m)
+print(n)
+print(d)
+print(s)
 
 
 if d % s == 0:
@@ -31,17 +34,20 @@ if cont == 0:
 
 if cont == 1:
 	k = 0
-	while k<m:
-		k+=n
-		print ('Add {} litres'.format(n))
-		if k == d:
-			print("Got desired water")
+	while k != d:
+		while k<=m:
+			k+=n
+			print ('Add {} litres'.format(n))
+			if k == d:
+				print("Got desired water")
+				quit()
 		
-	print ('Have {} litres'.format(k))
-	k -= m
-	print ('Remove {} litres'.format(m))
-	if k == d:
-		print("Done")
+		print ('Have {} litres'.format(k))
+		k -= m
+		print ('Remove {} litres'.format(m))
+		if k == d:
+			print("Done")
+			quit()
 
 	
 	
